@@ -3,13 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.b1.pack</groupId>
     <artifactId>lzma-sdk-4j</artifactId>
-    <version>9.22</version>
+    <version>9.22.0</version>
     <packaging>jar</packaging>
     <name>LZMA SDK for Java</name>
     <description>LZMA SDK for Java is a data compression library for Java from the LZMA SDK written by Igor Pavlov.</description>
     <licenses>
         <license>
             <name>Public Domain</name>
+            <url>http://creativecommons.org/licenses/publicdomain/</url>
+            <distribution>repo</distribution>
         </license>
     </licenses>
     <developers>
@@ -18,7 +20,39 @@
             <url>http://sourceforge.net/users/ipavlov/</url>
         </developer>
     </developers>
+    <contributors>
+        <contributor>
+            <name>Taras Puchko</name>
+            <url>http://sourceforge.net/users/tarasp/</url>
+        </contributor>
+    </contributors>
+    <scm>
+        <url>https://github.com/b1-pack/lzma-sdk-4j</url>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>dev.b1.org</id>
+            <url>scp://dev.b1.org:/usr/hosting/dev.b1.org/html/releases</url>
+        </repository>
+    </distributionManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <inherited>true</inherited>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
