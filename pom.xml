@@ -7,6 +7,7 @@
     <packaging>jar</packaging>
     <name>LZMA SDK for Java</name>
     <description>LZMA SDK for Java is a data compression library for Java from the LZMA SDK written by Igor Pavlov.</description>
+    <url>https://github.com/b1-pack/lzma-sdk-4j</url>
     <licenses>
         <license>
             <name>Public Domain</name>
@@ -14,6 +15,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <scm>
+        <developerConnection>scm:git:git@github.com:b1-pack/lzma-sdk-4j.git</developerConnection>
+        <connection>scm:git:git://github.com/b1-pack/lzma-sdk-4j.git</connection>
+        <url>https://github.com/b1-pack/lzma-sdk-4j</url>
+    </scm>
     <developers>
         <developer>
             <name>Igor Pavlov</name>
@@ -26,9 +32,6 @@
             <url>http://sourceforge.net/users/tarasp/</url>
         </contributor>
     </contributors>
-    <scm>
-        <url>https://github.com/b1-pack/lzma-sdk-4j</url>
-    </scm>
     <distributionManagement>
         <repository>
             <id>dev.b1.org</id>
@@ -54,6 +57,19 @@
                 <executions>
                     <execution>
                         <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <inherited>true</inherited>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.6.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
                         </goals>
