@@ -7,7 +7,7 @@
     </parent>
     <groupId>org.b1.pack</groupId>
     <artifactId>lzma-sdk-4j</artifactId>
-    <version>9.22.0-SNAPSHOT</version>
+    <version>9.22.0</version>
     <packaging>jar</packaging>
     <name>LZMA SDK for Java</name>
     <description>LZMA SDK for Java is a data compression library for Java from the LZMA SDK written by Igor Pavlov.</description>
